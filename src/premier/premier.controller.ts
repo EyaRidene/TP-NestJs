@@ -1,4 +1,4 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Patch } from "@nestjs/common";
 import { Delete, Post, Put, Get } from '@nestjs/common/decorators';
 
 @Controller('premier')
@@ -21,6 +21,11 @@ export class PremierController {
   @Put('get')
   putMethod(): string {
     console.log('put method');
-    return 'update method ';
+    return 'put method ';
+  }
+  @Patch('patch')
+  patchMethod(): string {
+    console.log('patch method');
+    return 'patch method ';
   }
 }
